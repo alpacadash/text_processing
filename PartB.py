@@ -10,7 +10,7 @@ class TokenList:
     def tokenize(self, path):
         file = None
         try:
-            file = path.open()
+            file =open(path, mode='r', encoding='utf8')
             for line in file:
                 line = line.strip()
                 arr = self.split_by_non_alpha(line)
